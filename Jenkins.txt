@@ -14,7 +14,7 @@ pipeline {
                 script {
                     // Change directory and compile the Java file
                     bat '''
-                        javac K:\Java\Fibo_no_recursion.java
+                        javac K:/Java/Fibo_no_recursion.java
                     '''
                 }
             }
@@ -25,7 +25,7 @@ pipeline {
                 script {
                     // Run the compiled Java program
                     bat '''
-                        java -cp target K:\Java Fibo_no_recursion
+                        java -cp target K:/Java Fibo_no_recursion
                     '''
                 }
             }
