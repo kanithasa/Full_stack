@@ -16,7 +16,7 @@ public class Sample1 {
         }
 
         System.out.println(prev+" "+next+" ");
-        n.close();
+        
 
     }
 }
