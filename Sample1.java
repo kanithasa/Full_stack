@@ -1,10 +1,9 @@
 import java.util.Scanner;
 public class Sample1 {
     public static void main(String args[]){
-        System.out.println("enter the number of fibonacci numbers:");
-        Scanner n=new Scanner(System.in);
+        
         int count=2;
-        int number=n.nextInt();
+        int number=10;
         int prev=0;
         int next=1;
        
