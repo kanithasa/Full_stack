@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-      stage('Checkout') {
+        stage('Checkout') {
             steps {
                 // Clone the Git repository
                 git url: 'https://github.com/kanithasa/Full_stack.git', branch: 'main' // Update with your repo URL and branch
@@ -14,7 +14,7 @@ pipeline {
                 script {
                     // Change directory and compile the Java file
                     bat '''
-                        javac K:/Java/Fibo_no_recursion.java
+                        javac K:/Java/Fibo_no_recursion.java -d K:/Java
                     '''
                 }
             }
@@ -25,7 +25,7 @@ pipeline {
                 script {
                     // Run the compiled Java program
                     bat '''
-                        java -cp target K:\Java Fibo_no_recursion
+                        java -cp K:/Java Fibo_no_recursion
                     '''
                 }
             }
