@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Fibo_no_recursion {
+public class Sample1 {
     public static void main(String args[]){
         System.out.println("enter the number of fibonacci numbers:");
         Scanner n=new Scanner(System.in);
