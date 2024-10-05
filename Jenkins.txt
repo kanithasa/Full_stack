@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+
+    stages {
+    
+
+        stage('Compile') {
+            steps {
+                script {
+                    // Change directory and compile the Java file
+                    bat '''
+                        javac K:\Java\Fibo_no_recursion.java
+                    '''
+                }
+            }
+        }
+
+        stage('Run') {
+            steps {
+                script {
+                    // Run the compiled Java program
+                    bat '''
+                        java -cp target K:\Java\Fibo_no_recursion.java
+                    '''
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline completed.'
+        }
+        success {
+            echo 'Build succeeded!'
+        }
+        failure {
+            echo 'Build failed.'
+        }
+    }
+}
