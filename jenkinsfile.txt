@@ -25,7 +25,7 @@ pipeline {
                 script {
                     // Run the compiled Java program
                     bat '''
-                        java -cp Sample1
+                        java -cp target Sample1
                     '''
                 }
             }
