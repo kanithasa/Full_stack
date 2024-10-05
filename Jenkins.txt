@@ -25,7 +25,7 @@ pipeline {
                 script {
                     // Run the compiled Java program
                     bat '''
-                        java -cp target K:/Java Fibo_no_recursion
+                        java -cp target K:\Java Fibo_no_recursion
                     '''
                 }
             }
