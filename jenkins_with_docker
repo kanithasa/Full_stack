@@ -1,0 +1,19 @@
+# Variables
+IMAGE_NAME="python-app-container"
+CONTAINER_NAME="python-app"
+PORT="5000"
+
+# Step 1: Build the Docker image
+echo "Building Docker image..."
+docker build -t $IMAGE_NAME .
+
+# Step 2: Stop and remove any existing container with the same name
+echo "Cleaning up old container..."
+docker stop $CONTAINER_NAME || true
+docker rm $CONTAINER_NAME || true
+
+# Step 3: Deploy the new container
+echo "Running the container..."
+docker run -d --name $CONTAINER_NAME -p $PORT:5000 $IMAGE_NAME
+
+echo "Application deployed and running on port $PORT."
